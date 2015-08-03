@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>
+         C:\\Users\\princEvil\\Documents\\NetBeansProjects\\Hospital2\\web\\images\\
+     </param-value>
+    </context-param>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/health</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pwd</param-name>
+        <param-value>1234</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>SendMsg</servlet-name>
+        <servlet-class>web.SendMsg</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchDoctorServlet</servlet-name>
+        <servlet-class>web.searchDoctorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchPatientServlet</servlet-name>
+        <servlet-class>web.searchPatientServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>verifyUserPatient</servlet-name>
+        <servlet-class>web.verifyUserPatient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>verifyUserDoctor</servlet-name>
+        <servlet-class>web.verifyUserDoctor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>fileUpload</servlet-name>
+        <servlet-class>web.fileUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendMsg</servlet-name>
+        <url-pattern>/sendmsg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>myquery</servlet-name>
+        <servlet-class>web.myquery</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myquery</servlet-name>
+        <url-pattern>/myquery</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>authentication1</servlet-name>
+        <servlet-class>web.authentication1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>web.logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>authentication1</servlet-name>
+        <url-pattern>/authentication1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchDoctorServlet</servlet-name>
+        <url-pattern>/searchDoctorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchPatientServlet</servlet-name>
+        <url-pattern>/searchPatientServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifyUserPatient</servlet-name>
+        <url-pattern>/verifyUserPatient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifyUserDoctor</servlet-name>
+        <url-pattern>/verifyUserDoctor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fileUpload</servlet-name>
+        <url-pattern>/fileUpload</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>500</error-code>
+<location>/error.html</location>
+    
+</error-page>
+    <error-page>
+        <error-code>400</error-code>
+<location>/error400.html</location>
+    
+</error-page>
+</web-app>

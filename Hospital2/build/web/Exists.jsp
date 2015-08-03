@@ -1,0 +1,22 @@
+<%-- 
+    Document   : Exists
+    Created on : Jul 30, 2014, 6:14:50 AM
+    Author     : princEvil
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        
+    </head>
+    <body>
+        <h1>Hello New User!</h1>
+        <script> 
+            alert('Invalid UserName , Already Exists');
+        </script>
+            
+    </body>
+</html>
